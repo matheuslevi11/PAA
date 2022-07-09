@@ -29,6 +29,13 @@ def recorrencia_asterisco(n):
         return 1
     return 2 * recorrencia_asterisco(n-1) + n
 
+def recorrencia(n):
+    if n == 1: return 1
+    return recorrencia(n-1) + n
+
+def f(n):
+    return (n * (n-1))/2 + n
+
 for i in range(1, 6):
-    asterisco(i)
-    print(recorrencia_asterisco(i))
+    print(recorrencia(i))
+    print(f(i))
